@@ -2,6 +2,7 @@
 from add_0 import add
 
 if __name__ == "__main__":
-    a, b = 1, 2
+    a = 1
+    b = 2
     result = add(a, b)
     print("{num1} + {num2} = {addition}".format(num1=a, num2=b, addition=result))
