@@ -1,4 +1,6 @@
 def add(a, b):
-    print(f"{a} + {b} = {a + b}")
+    return (a + b)
 
-add(1, 2)
+if __name__ == "__main__":
+    a, b = 1, 2
+    print(f"{a} + {b} = {add(a, b)}")
