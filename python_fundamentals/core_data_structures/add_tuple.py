@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 def add_tuple(tuple_a=(), tuple_b=()):
     length = min(len(tuple_a), len(tuple_b))
+    if length > 2:
+        length = 2
     tuple_array = []
 
     for i in range(length):
