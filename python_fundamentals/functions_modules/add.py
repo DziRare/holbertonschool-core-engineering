@@ -1,2 +1,6 @@
 #!/usr/bin/env python3
-import add_0
+from add_0 import add
+
+if __name__ == "__main__":
+    a, b = 1, 2
+    print(f"{a} + {b} = {add(a, b)}")
