@@ -11,4 +11,4 @@ def uppercase(str):
         else:
             uppercase_string += char
 
-    print(uppercase_string)
+    print("{result}".format(result=uppercase_string))
