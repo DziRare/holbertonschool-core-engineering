@@ -52,6 +52,7 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         elif value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = value
 
     def my_print(self):
         if self.__size == 0:
@@ -85,7 +86,3 @@ class Square:
                 square += "\n"
 
         return square
-
-
-mysquare = Square(0, (10, 3))
-mysquare.my_print()
