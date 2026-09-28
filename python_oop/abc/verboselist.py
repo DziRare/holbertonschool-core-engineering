@@ -21,6 +21,7 @@ class VerboseList(list):
     def pop(self, index=-1):
         popped_number = super().pop(index)
         print(f"Popped [{popped_number}] from the list.")
+        return popped_number
 
 
 vl = VerboseList([1, 2, 3])
