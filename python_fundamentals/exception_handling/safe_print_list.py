@@ -11,9 +11,3 @@ def safe_print_list(my_list=[], x=0):
     print("")
 
     return x
-
-
-my_list = [1, 2, 3, 4]
-
-nb_print = safe_print_list(my_list, 6)
-print(f"elements: {nb_print}")
