@@ -5,7 +5,7 @@
 def read_file(filename=""):
     """This function is for reading a file"""
     with open(filename) as f:
-        print(f.read())
+        print(f.read(), end="")
 
 
 if __name__ == "__main__":
