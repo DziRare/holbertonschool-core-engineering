@@ -8,6 +8,7 @@ from websockets.exceptions import ConnectionClosed
 
 CONNECTED_CLIENTS = set()
 
+
 async def echo(websocket):
     CONNECTED_CLIENTS.add(websocket)
     print(CONNECTED_CLIENTS)
@@ -16,7 +17,7 @@ async def echo(websocket):
         async for message in websocket:
             await websocket.send(f"U:{message}")
     except ConnectionClosed:
-        print(f"Disconnected {websocket}")    
+        print(f"Disconnected {websocket}")
     finally:
         CONNECTED_CLIENTS.remove(websocket)
 
