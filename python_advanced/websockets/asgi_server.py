@@ -8,7 +8,7 @@ from starlette.exceptions import WebSocketException
 
 
 async def homepage(request):
-    return HTMLResponse("<h1>WebSockets Echo<h1>")
+    return HTMLResponse("<h1>WebSocket Echo<h1>")
 
 
 async def websocket_endpoint(websocket):
