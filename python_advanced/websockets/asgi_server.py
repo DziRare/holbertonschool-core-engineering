@@ -6,8 +6,10 @@ from starlette.routing import Route, WebSocketRoute
 from starlette.websockets import WebSocket
 from starlette.exceptions import WebSocketException
 
+
 async def homepage(request):
-    return HTMLResponse("<h1>WebSockets<h1>")
+    return HTMLResponse("<h1>WebSockets Echo<h1>")
+
 
 async def websocket_endpoint(websocket):
     await websocket.accept()
@@ -20,7 +22,10 @@ async def websocket_endpoint(websocket):
     finally:
         await websocket.close()
 
-app = Starlette(routes=[
-    Route("/", homepage),
-    WebSocketRoute("/ws", websocket_endpoint),
-])
+
+app = Starlette(
+    routes=[
+        Route("/", homepage),
+        WebSocketRoute("/ws", websocket_endpoint),
+    ]
+)
